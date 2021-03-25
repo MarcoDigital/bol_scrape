@@ -25,9 +25,6 @@ def bolchecker():
         pass
 
 
-prijsproduct = bolchecker()
-
-
 def prijschecker(prijsproduct, targetprijs):
     t = time.localtime()
     current_time = time.strftime("%H:%M:%S", t)
@@ -52,5 +49,6 @@ def sendmail():
 
 
 while True:
+    prijsproduct = bolchecker()
     prijschecker(prijsproduct, targetprijs)
     time.sleep(interval)
